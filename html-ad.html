@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Additional Page | CODE HIVE</title>
+        <link href="./CSS/student02/html-ad.css" rel="stylesheet">
+        <link href="./CSS/JavaAd.css" rel="stylesheet">
+        
+        <script>
+            topButton = document.getElementById('top');
+			window.onscroll= function() {scrollFunction()};
+			function scrollFunction(){
+				if (document.body.scrollTOp >400 || document.documentElement.scrollTop > 400){
+					topButton.style.display= "block";
+				}
+				else{
+					topButton.style.display = "none";
+				}
+			}
+			function topFuntion(){
+				document.documentElement.scrollTop= 0; 
+			}
+        </script>
+    </head>
+    <body>
+
+        <header>
+            <img id="logo" src="./Images/NavLogo.png" alt="Code Hive Logo">
+            <nav>
+                <ul id="navigation">
+					<li><a href="Main page.html">Home</a></li>
+					<li><a href="Gallery.html">Gallery</a></li>
+					<li><a href="Quiz.html">Quiz</a></li>
+					<li><a href="Product.html">Store</a></li>
+					<li><a href="Sitemap.html">Site Map</a></li>
+					<li><a href="form.html">Query</a></li>
+					<li><a href="StudentDetails.html">About Us</a></li> 
+                </ul>
+            </nav>
+        </header><!--For the navbar and logo-->
+
+        <div>
+            <img class="java-image" src="./Images/code3.jpg" alt="html Background" width="900">
+            <h1 class="java-header">HTML</h1>
+        </div>
+        
+        <div id="link">
+            <h2><strong>CONTENTS :</strong></h2>
+            <a href="#intro">INTRODUCTION</a><br>
+            <a href="#careers">CAREERS ASSOCIATED</a><br>
+            <a href="#advantages">ADVANTAGES</a><br>
+            <a href="#future">FUTURE</a><br>
+            <a href="#courses">COURSES</a>
+        </div>
+
+        <main>
+            <div class="content-container">
+                <div class="content "id="intro">
+                    <legend>Introduction</legend>
+                    <p>The markup language HTML (Hypertext Markup Language) is used to write and organize material for the World Wide Web. 
+                        Anyone seeking to design and develop websites or web-based applications must be proficient in this standard language because it is used to do so.
+                        HTML is a powerful language that can be used to build anything from easy-to-use basic websites to sophisticated web-based programs. 
+                        It is continuously changing and getting better, with new releases and features coming out frequently to keep up with the web's dynamic environment.
+                    </p>
+                </div>
+                
+                <div class="content" id="careers">
+                    <legend>Careers Associated With HTML</legend>
+                    <p>Since HTML is a fundamental talent necessary for many positions in web development and digital marketing, there are many careers related to it. Here are a few illustrations.
+                         Website creation, development, and upkeep are the responsibilities of web developers. 
+                         They create online pages that are aesthetically pleasing, responsive, and user-friendly using HTML, CSS, and JavaScript.
+                        Front-end coders are experts in designing a website's user interface (UI). The visual components of the website that visitors engage with are built using HTML, CSS, and JavaScript.
+                    </p>
+                </div>
+
+                <div class="content" id="advantages">
+                    <legend>Benefits of Learning HTML</legend>
+                    <p>There are several advantages to learning HTML (Hypertext Markup Language), including
+                        Create and design websites: HTML is the building block of all websites, so understanding HTML will enable you to start from beginning when building and designing websites. 
+                        Create forms and other interactive components, add links, images, videos, and other multimedia, and structure and order the material.
+                        HTML skills are in high demand, and studying HTML can lead to a variety of job paths in areas like web design, programming, digital marketing, content production, and more.
+                        Understanding Web Technologies: Understanding HTML will help you comprehend other web technologies like CSS (Cascading Style Sheets) and JavaScript. HTML is a crucial component of the web creation process. 
+                        You can develop more sophisticated and intricate webpages and apps with the aid of this knowledge.
+                        
+                    </p>
+                </div>
+                
+                <div class="content" id="future">
+                    <legend>Future of HTML</legend>
+                    <p>HTML has changed over the years to keep up with the most recent technologies and industry guidelines as a language for writing online sites. 
+                        Developers will probably continue to concentrate on creating HTML that is semantically meaningful as online apps become more complicated. 
+                        This calls for the use of HTML tags that convey information about the page's substance rather than just its look. 
+                        Semantic HTML makes web sites more available to users with disabilities and aids in search engines' understanding and indexing of them.
+                        
+                    </p>
+                </div>
+            
+                <div class="content" id="courses">
+                    <legend>For Free Courses : </legend>
+                    <li><a href="https://www.coursera.org/learn/html-css-javascript-for-web-developers">HTML, CSS, and Javascript for Web Developers</a></li>
+                    <li><a href="https://www.coursera.org/specializations/web-design">Basics of Web Development & Coding Specialization</a></li>
+                    <li><a href="https://www.coursera.org/learn/html">Introduction to HTML5</li>
+                    <li><a href="https://www.coursera.org/learn/html-and-css-in-depth">HTML and CSS in depth</li>
+                    <h3 style="font-weight: bold;">For Premium Courses And Books, Checkout The CODEHIVE Store.</h3>
+                </div>
+
+                <div class="back-to-top">
+                    <a id="top" class="top" href="#"> <b>TOP</b> </a>
+                </div>
+
+
+            </div>    
+        </main>    
+        
+        
+        <div class="footer"><br>
+            <div class="footer-bottom">Page Editor : <a href="Page Editor.html">Dinuk Shivakumar</a></div>
+        </div>
+
+    
+    </body>
+</html>

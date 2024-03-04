@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./CSS/Student04/styles.css">
+    <style>
+
+    /* FOOTER */
+
+    .footer{
+        background-color: black;
+        color:#fff;
+        height:70px;
+        width:100%;
+        justify-content: center;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        bottom: 0px;
+        left:0px;
+        padding-top:0px;
+        bottom: 0%;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .footer a:hover {
+        transition: 0.5s ;
+        color: #7108d4;
+    }
+    /* The grid: Four equal columns that floats next to each other */
+    .col-imgs {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 200px;
+        overflow: hidden;
+        justify-content: center; 
+    }
+    .grid-imgs img:hover{ 
+        transform:translateY(-10px);
+    }
+
+    .grid-imgs{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap:80px;
+        list-style-type: none;
+        margin: 50px;
+        object-fit: cover;
+    }
+    .grid-imgs img {
+        border-radius: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .modal-content {
+        margin:auto;
+        display: block; 
+        width: 100%; 
+        max-width: 500px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* The expanding image container */
+    .containers {
+        display: none; /* Hidden by default / position: fixed; / Stay in place */
+        z-index: 2; /* Sit on top */
+        padding-top: 20px; /* Location of the box */ left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */ 
+        background-color: rgb(121, 19, 19); /* Fallback color */ 
+        background-color: #000000; /* Black w/ opacity */
+    }
+
+    /* Expanding image text */
+    #imgtext {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 900px;
+        text-align: left;
+        color: white;
+        padding: 5px 5%;
+        height: 200px;
+        font-size:18px;
+    }
+
+    /* Closable button inside the expanded image */
+    .closebtn {
+        position: static;
+        top:450px;
+        right: 20px;
+        color:#7108d4;
+        font-size: 35px;
+        cursor: pointer;
+        margin-left: 1cm;
+    }
+
+    .settings {
+        position: fixed;
+        top: 100px;
+        right:0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        background-color: #3b0270;
+        z-index: 100;
+        border-radius:20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .settings select {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .settings button {
+        padding: 5px 10px;
+        font-size: 16px;
+        background-color: #260d5f;
+        color: #fff;
+        border: none;
+        border-radius: 80px;
+        cursor: pointer;
+    }
+    body.black {
+        background-color: #000;
+        color: #fff;
+    }
+
+    body.white {
+        background-color: #fff;
+        color: #000;
+    }
+
+    body.purple {
+        background-color: #6d0e7a;
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="./images/NavLogo.png" alt="Code Hive Logo">
+        <nav>
+            <ul id="navigation">
+                <li><a href="Main page.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Product.html">Store</a></li>
+                <li><a href="Sitemap.html">Site Map</a></li>
+                <li><a href="form.html">Query</a></li>
+                <li><a href="StudentDetails.html">About Us</a></li>  
+           </ul>
+        </nav>
+    </header>
+    <div class="settings">
+        <select id="color-scheme">
+            <option value="default">Default</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="purple">Purple</option>
+        </select>
+        <select id="font-size">
+            <option value="default">Default</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <button id="apply-settings">Apply</button>
+    </div>
+    <script>
+        const colorSchemeDropdown = document.querySelector('#color-scheme');
+        const fontSizeDropdown = document.querySelector('#font-size');
+        const applyButton = document.querySelector('#apply-settings');
+        const body = document.querySelector('body');
+        const navBar = document.querySelector('#navigation li a');
+        const footer = document.querySelector('.footer'); 
+        
+    
+        applyButton.addEventListener('click', () => {
+            const colorScheme = colorSchemeDropdown.value;
+            const fontSize = fontSizeDropdown.value;
+    
+            if (colorScheme === 'black') {
+                body.classList.add('black');
+            } else {
+                body.classList.remove('black');
+            }
+    
+            if (colorScheme === 'white') {
+                body.classList.add('white');
+            } else {
+                body.classList.remove('white');
+            }
+
+            if (colorScheme === 'purple') {
+                body.classList.add('purple');
+            } else {
+                body.classList.remove('purple');
+            }
+    
+            if (fontSize === 'small') {
+                body.style.fontSize = '12px';
+                navBar.style.fontSize = '12px'; 
+                footer.style.fontSize = '12px'; 
+       
+            } else if (fontSize === 'medium') {
+                body.style.fontSize = '18px';
+                navBar.style.fontSize = '18px'; 
+                footer.style.fontSize = '18px'; 
+                
+            } else if (fontSize === 'large') {
+                body.style.fontSize = '24px';
+                navBar.style.fontSize = '24px'; 
+                footer.style.fontSize = '24px';
+                
+            } else {
+                body.style.fontSize = '18px';
+                navBar.style.fontSize = '18px';
+                footer.style.fontSize = '18px'; 
+            }
+        });
+    </script>
+    <div class="col-imgs">
+        <ul class="grid-imgs">
+            <li><a href="#img-1"><img src="./Images/java-logo.png" width="300" height="300"  alt="Java, a high-level programming language known for its versatility and cross-platform capabilities.
+                Used for developing everything from mobile apps to enterprise-level software.
+                Boasts a large and supportive community, making it a popular choice for developers worldwide."
+                onclick="myFunction(this);"></a></li>
+                
+                
+            <li><a href="#img-2"><img src="./Images/c++-logo.png" width="300" height="300" alt="C++, a powerful and popular programming language renowned for its performance and speed.
+                Widely used in the development of operating systems, video games, and high-performance applications.
+                Offers a wide range of features, including object-oriented programming and low-level memory manipulation" 
+                onclick="myFunction(this);" ></a></li>
+                
+
+            <li><a href="#img-3"><img src="./Images/python-logo.jpg"   width="300" height="300" alt="Python, a versatile and beginner-friendly programming language with an emphasis on readability and simplicity.
+                Widely used in data science, machine learning, and web development, among other fields.
+                Offers a vast library of modules and frameworks, making it a go-to choice for developers across multiple domains." 
+                onclick="myFunction(this);" ></a></li>
+                
+
+            <li><a href="#img-4"><img src="./Images/html-logo.png"   width="300" height="300" alt="HTML, the backbone of the web, used for creating and structuring content on the internet.
+                Defines the layout, formatting, and structure of web pages, allowing for the creation of visually appealing and accessible sites.
+                Easy to learn and understand, making it an ideal starting point for anyone interested in web development" 
+                onclick="myFunction(this);" ></a></li>
+            
+            <li><a href="#img-5"><img src="./Images/FullStackSoftwareDevelopment.jpg"   width="300" height="300" alt="Full-stack software development is a comprehensive approach to building software applications that 
+                involves designing and developing both the front-end and back-end components of an application. This includes the user interface, business logic, database management, and server-side scripting.A full-stack 
+                developer is responsible for creating and managing the entire software application, from designing the user interface to managing the database and server-side code. This requires knowledge of multiple programming languages, frameworks, and tools." 
+                onclick="myFunction(this);" ></a></li>
+            
+            <li><a href="#img-6"><img src="./Images/ProgrammingPrinciples.jpg"   width="300" height="300" alt="Programming principles are a set of guidelines that developers follow when creating software applications. These principles help to ensure that the code is efficient, maintainable, and scalable." 
+                onclick="myFunction(this);" ></a></li>
+            
+            <li><a href="#img-7"><img src="./Images/UIUXDesignSpecialization.jpg"   width="300" height="300" alt="UI/UX design specialization is a field of design that focuses on creating intuitive and engaging user experiences for digital products. User Interface (UI) 
+                design focuses on the visual elements of the user experience, including the layout, typography, color schemes, and interactions." 
+                onclick="myFunction(this);" ></a></li>
+           
+            <li><a href="#img-8"><img src="./Images/bookStore.jpg"   width="300" height="300" alt="The book store of this website provides three books which are 'Ace the Data Science Interview','Dont Make Me Think','python for Kids'." 
+                onclick="myFunction(this);" ></a></li>    
+        </ul>
+    </div>
+        <br>
+        
+
+	<div class="containers">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img class="modal-content" id="expandedImg" style="width:100%" alt="" src=".">
+        <div id="imgtext"></div>
+	</div>
+
+	<script>
+		function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+		}
+	</script>
+	
+    <div class="footer"><br>
+        <div class="footer-bottom"> Page Editor : <a href ="PageEditorTarun.html">Tarun Rajaram</a></div>
+    </div>
+</body>
+</html>

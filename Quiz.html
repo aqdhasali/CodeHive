@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Quiz | CODEHIVE</title>
+            <link href="../CodeHive/CSS/Quiz.css" rel="stylesheet">
+            <link href="../CodeHive/CSS/Student03/Style.css" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <img id="logo" src="../CodeHive/Images/NavLogo.png" alt="Code Hive Logo">
+                <nav>
+                    <ul id="navigation">
+                        <li><a href="Main page.html">Home</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                        <li><a href="Quiz.html">Quiz</a></li>
+                        <li><a href="Product.html">Store</a></li>
+                        <li><a href="Sitemap.html">Site Map</a></li>
+                        <li><a href="form.html">Query</a></li>
+                        <li><a href="StudentDetails.html">About Us</a></li>  
+                    </ul>
+                </nav>
+            </header>    
+
+            <div class="quiz-rules" id="quiz-rules-id" >
+                <h1> RULES OF THE QUIZ </h1><br>
+                <p> 1. This quiz contains of 10 questions.</p><br>
+                <p> 2. You cannot reselect an answer.</p><br>
+                <p> 3. The quiz will be submitted auto within 1 minute.</p><br>
+                <p> 4. You must select an option to move to the next question.</p><br>
+                <p> 5. Your quiz performance will be displayed once you submit your quiz.</p>
+            </div>
+
+
+            <main>
+                <!--Container for the start button of the quiz-->
+                <div class="start-button-container" id="start-button">
+                    <button onclick="startQuiz()">START QUIZ</button>
+                </div>
+
+                <!-------------------------------------------------------->
+                <!--Container for the score box that is displayed after the questions are answered -->
+                <div id="main-container">
+                    <div class="endgame-container" id="endgame-container-id">
+                        <!--Container for the score-->
+                        <h1>CONGRATULATONS, QUIZ COMPLETED</h1><br><br><br><br>
+                          
+                        <div class="grade-details"><br><br>
+                            <p>ATTEMPTS :<span id="attempts"></span></p><br>
+                            <p>WRONG ANSWERS : <span id="wrong-answers"></span></p><br>
+                            <p>RIGHT ANSWERS : <span id="right-answers"></span></p><br>
+                            <p>GRADE : <span id="grade-percentage"></span>%</p><br>
+                            <p>TIME TAKEN : <span id="time-taken"></span>s</p><br>
+                            <p><span id="feedback"></span></p>
+                        </div>
+                          
+                        <div class="continue-button-container" id="continue-button">
+                            <button onclick="closeScoreModal()">CONTINUE</button>
+                        </div>
+                    </div>    
+    
+                    <!--Container for the questions, options and score details-->
+                    <div class="quiz-container" id="quiz-container-id">
+                        <div class="quiz-details-container">
+                            <h1>SCORE :  <span id="player-score"></span> / 10</h1>
+                            <h1>QUESTION :  <span id="question-number"></span> / 10</h1>
+                            <h1>TIME : <span id="time"></span></h1>
+                        </div>
+
+                        <!--Question div-->
+                        <div class="quiz-questions-container" id="quiz-questions-id">
+                            <h1 id="display-question"></h1>
+                        </div>
+
+                        <!--Options Div-->
+                        <div class="quiz-options-container" id="quiz-options-id">
+        
+                            <span>
+                                <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                                <label for="option-one" class="option" id="option-one-label"></label>
+                            </span>
+                          
+            
+                            <span>
+                                <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                                <label for="option-two" class="option" id="option-two-label"></label>
+                            </span>
+                          
+            
+                            <span>
+                                <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                                <label for="option-three" class="option" id="option-three-label"></label>
+                            </span>
+                          
+            
+                            <span>
+                                <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                                <label for="option-four" class="option" id="option-four-label"></label>
+                            </span>
+
+                            <!--Two control buttons Star and Next-->
+                            <div class="next-button-container">
+                                <button onclick="handleNextQuestion()">NEXT</button>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="footer"><br>
+                    <div class="footer-bottom">Page Editor : <a href="Aqdhas.html">Aqdhas Ali</a></div>
+                </div>        
+            </main>
+            <script src="../CodeHive/JS/Quiz.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+body{
+    font-family: 'Gotham','sans-serif';
+    padding: 0; 
+    background-color:#1b1b1b;
+}
+
+/*------------------------------------------------------------------------*/
+main{
+    padding-top: 10%;
+}
+
+h1,p{
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 2px;
+    
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    color:#FEFFFF;
+    font-size: xx-large;
+}
+p{
+    font-weight: bold;
+    text-align: center;
+    color:#eee3f8;
+    font-size: x-large;
+}
+img{
+    width: 75%;
+    height: 350px;
+}
+
+
+.row{
+    width:90%;
+    padding: 0 5px 0 140px;
+
+}
+
+.column {
+    float: left; 
+    width: 50%;
+    padding-left: 120px;
+    justify-content: center;
+    align-items: center;
+    left:45%;
+}
+
+/* Details Container */
+.column div{
+    position: relative;
+    height: 50px;
+    width: 75.4%;
+    background: linear-gradient(to top left, #7108d4,#9c08d4);
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Gotham',sans-serif;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+    transition: 0.3s;
+}
+.column div a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.column div a:visited{
+    color: #fff;
+}
+.column:hover{
+    cursor: pointer;
+}
+
+.column div a:hover{
+    color: #141414;
+}
+
+.column:hover div{
+    visibility: visible;
+    opacity: 0.7; 
+    transform: translate(0, -10px);
+}
+
+.image{
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius:10px;
+    border:2px solid #a55beb;
+    transition: 0.3s;
+}
+.column:hover .image{
+    opacity: 0.3;
+    transform: translate(0, -10px);
+}
+
+
+

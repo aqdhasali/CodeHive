@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    background-color: #141414;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 5px;
+  }
+
+:target:before {
+    content: "";
+    display: block;
+    height: 85px; 
+    margin: -45px 0 0;
+    }
+
+h1{
+    color:#fff;
+    text-align: center;
+    margin-top: 0.80cm;
+    margin-bottom: 30px;
+   }
+
+   /* Test */
+
+#link {
+    position:absolute;
+    font-size: 16px;
+    height: 340px;
+    top: 220px;
+    left: 950px;
+    width: 350px;
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top left, #7108d4, #9c08d4);
+    text-align: center;
+    justify-content: center;
+    align-items: justify;
+    display: grid;
+    color: white;
+   }
+
+#link{
+    text-align: center;
+    justify-content: center;
+    align-items: justify;
+    display: grid;
+    color: white;
+}
+#link h2{
+    font-size: xx-large;
+    margin-top: 5px;
+}
+#link a{
+    font-family:'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-shadow: #000;
+}
+
+#link:hover {
+    color: #141414;
+    transition: 0.2s ease;
+    transform: translateY(-12px);   
+}
+
+.Cplus-header {
+    position: absolute;
+    font-family: sans-serif;
+    top: 30%;
+    left: 30%;
+    letter-spacing: 9px;
+    transform: translate(-80%);
+    color: #fff;
+    font-size: 180px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#link a:hover{
+    transition: 0.5s;
+    color: #141414;
+}
+.Cplus-image {
+    position: relative;
+    padding-top:6%;
+    filter: brightness(0.3);
+}
+
+legend {
+    font-weight: bold;
+    text-align:left;
+    font-size: 24px;
+    color: #7108d4;
+  }
+
+/* NAVIGATION BAR */
+
+header{
+    position: fixed;
+    top: 0;
+    width: 115%;
+    left:0;
+    height: 90px;
+    background-color: #000;
+    z-index: 100;
+}
+  
+header img{
+    top:10px;
+    width:182px;
+    height:90px;
+    padding-left:30px;
+    padding-top: 4px;
+}
+
+#navigation 
+{
+    position: fixed;
+    width:auto;
+    height: 57px;
+    top:-2px;
+    right: 11%;
+    background-color: black;
+}
+
+#navigation li{
+    top:5px;
+    display:inline-block;
+    padding:6px 25px;
+    margin-right:12px;
+    margin-top: 5px;
+}
+     
+  #navigation li a{
+      text-decoration: none;
+      color:rgb(255, 255, 255);
+      font-size: 20px;
+      font-weight: 800;
+      top: 10px;
+      padding:5px;
+      border:1px solid #000; 
+      transition: 0.6s ease;
+}
+
+#navigation  li a:hover{
+    transition: 0.5s;
+    color: #7008d1;
+}
+
+/* Back to Top */
+
+#top{
+    position: fixed;
+    background-color: #7108d4;
+    color: #fff;
+    bottom: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius:30px;
+    font-size: 15px;
+    right: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#top:hover{
+    background-color: var(--deep-saffron);
+    color: var(--rich-black);
+}
+
+ /* Additional Page */
+
+.content-container{
+    color: white;
+}
+
+.content-container p{
+    text-align: justify;
+    text-justify: inter-word;
+} 
+
+.content-container .content{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+
+.content-container legend{
+    font-size: 30px;
+}
+
+.content-container .back-to-top{
+    position: fixed;
+    background-color: #7108d4;
+    color: #fff;
+    bottom: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius:15px;
+    font-size: 15px;
+    right: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+    
+.content-container .back-to-top a{
+    text-decoration: none;
+    color: #fff;
+}
+#top:hover{
+    background-color: #da24d1;  
+}
+
+a {
+    color: #fff;
+    text-decoration:dashed
+}
+
+a:visited {
+    color: #fff ;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: black;
+    color:#fff;
+    height:70px;
+    width:100%;
+    justify-content: center;
+    text-align: center;
+    bottom: 0px;
+    left:0px;
+    top:200%;
+    padding-top:0px;
+    bottom: 0%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    transition: 0.5s;
+    color: #7108d4;
+}
+
+
+

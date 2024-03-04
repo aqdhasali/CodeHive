@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>C++ Additional Page | CODE HIVE</title>
+        <link href="./CSS/Student04/AdditionalPage.css" rel="stylesheet">
+        <script>
+            topButton = document.getElementById('top');
+			window.onscroll= function() {scrollFunction()};
+			function scrollFunction(){
+				if (document.body.scrollTOp >400 || document.documentElement.scrollTop > 400){
+					topButton.style.display= "block";
+				}
+				else{
+					topButton.style.display = "none";
+				}
+			}
+			function topFuntion(){
+				document.documentElement.scrollTop= 0; 
+			}
+        </script>
+    </head>
+    <body>
+
+        <header>
+            <img id="logo" src="./Images/NavLogo.png" alt="Code Hive Logo">
+            <nav>
+                <ul id="navigation">
+                    <li><a href="Main page.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Product.html">Store</a></li>
+                <li><a href="Sitemap.html">Site Map</a></li>
+                <li><a href="form.html">Query</a></li>
+                <li><a href="StudentDetails.html">About Us</a></li>   
+                </ul>
+            </nav>
+        </header><!--For the navbar and logo-->
+
+        <div>
+            <img class="Cplus-image" src="./Images/C++.jpeg" alt="C++ Background" width="900">
+            <h1 class="Cplus-header">C++</h1>
+        </div>
+        
+        <div id="link">
+            <h2><strong>CONTENTS :</strong></h2>
+            <a href="#intro">INTRODUCTION</a><br>
+            <a href="#careers">CAREERS ASSOCIATED</a><br>
+            <a href="#advantages">ADVANTAGES</a><br>
+            <a href="#future">FUTURE</a><br>
+            <a href="#courses">COURSES</a>
+        </div>
+
+        <main>
+            <div class="content-container">
+                <div class="content" id="intro">
+                    <legend>Introduction</legend>
+                    <p>C++ is a powerful and popular programming language that is widely used to develop software applications, operating systems, games, and more. 
+                        It was created in 1983 as an extension of the C programming language and has since become one of the most widely used programming languages in the world.
+                        C++ is known for its performance and efficiency, as well as its ability to support object-oriented programming principles. It is also highly customizable and flexible, 
+                        allowing developers to create code that is tailored to their specific needs.
+                    </p>
+                </div>
+                
+                <div class="content" id="careers">
+                    <legend>Careers Associated With C++</legend>
+                    <p>There are a variety of careers that are associated with C++ programming. C++ is commonly used in the development of software applications, 
+                        including operating systems, database systems, video games, and more. As such, C++ developers can find opportunities in a range of industries, including technology, entertainment, and finance.
+                        Some common job titles for C++ developers include software engineer, systems developer, game developer, and firmware engineer. 
+                        C++ developers may also work on specific areas of software development, such as user interface design, database management, or system architecture.
+                    </p>
+                </div>
+
+                <div class="content" id="advantages">
+                    <legend>Benefits of Learning C++</legend>
+                    <p>Learning C++ has many benefits for programmers and developers. First and foremost, C++ is a high-performance language that can be used to develop complex and efficient software applications. 
+                        It is also a popular language for game development, operating systems, and embedded systems. C++ is an object-oriented language, 
+                        which means that it allows for the creation of reusable code and promotes good programming practices.
+                        Additionally, learning C++ can provide a solid foundation for learning other programming languages, such as Java and Python. 
+                        Overall, mastering C++ can lead to numerous career opportunities in the tech industry and can help programmers develop software that is both powerful and efficient.
+                    </p>
+                </div>
+                
+                <div class="content" id="future">
+                    <legend>Future of C++</legend>
+                    <p>C++ has been around for over three decades and continues to be a widely used programming language today. Despite the emergence of newer languages, C++ remains popular for its performance and low-level control.
+                       With the release of C++20, the language has been updated to include new features such as modules, concepts, and coroutines. These updates aim to improve the language's usability and make it easier to write robust and efficient code. 
+                       As technology continues to evolve, C++ will remain relevant for developing high-performance applications, especially in areas such as game development, scientific computing, and real-time systems. 
+                       Additionally, with the increasing demand for artificial intelligence and machine learning, C++ is likely to remain an important language for implementing performance-critical components of such systems. 
+                       Overall, the future of C++ looks promising, and the language is expected to continue to evolve to meet the needs of modern software development.
+                    </p>
+                </div>
+            
+                <div class="content" id="courses">
+                    <legend>For Free Courses : </legend>
+                    <li><a href="https://www.learncpp.com/">A comprehensive tutorial for beginners and intermediate programmers who want to learn C++</a></li>
+                    <li><a href="https://cplusplus.com/">Learn C++ syntax and semantics</a></li>
+                    <li><a href="https://www.tutorialspoint.com/index.htm">Tutorial on C++, covering basic to advanced topics</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/c-plus-plus/?ref=ghm#practice">Practice C++</a></li>
+                    <h3 style="font-weight: bold;">For Premium Courses And Books, Checkout The CODEHIVE Store.</h3>
+                </div>
+
+                <div class="back-to-top">
+                    <a id="top" class="top" href="#"> <b>TOP</b> </a>
+                </div>
+
+
+            </div>    
+        </main>    
+        
+        
+        <div class="footer"><br>
+            <div class="footer-bottom">Page Editor : <a href="PageEditorTarun.html">Tarun Rajaram</a></div>
+        </div>
+
+    
+    </body>
+</html>

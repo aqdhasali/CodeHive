@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dinuk Shivakumar</title>
+        <link href="./CSS/PageEditor.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-details">
+                    <div class="img-wrapper">
+                        <img src="./Images/dinuk.jpeg" alt="person"/>
+                    </div>
+                    <div class="person-info">
+                        <h3>Dinuk Shivakumar</h3>
+                        <p>Student Role : 2</p>
+                        <p>Following Tasks Were Performed By Me!</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <button onclick="myfunction()">TASKS</button>
+                </div>
+                <div class="all-tasks" id="all-tasks">
+                    <div class="task-one">
+                        <h3><a href="Main page.html">Main Page</a></h3>
+                        <p>Developed a main page including the navigation bar and footer.</p>
+                    </div>
+                    <div class="task-two">
+                        <h3><a href="form.html">Query form</a></h3>
+                        <p>Designed a query form which will get feedbacks from the user, I also used Javascript to validate the user inputs.</p>
+                    </div>
+                    <div class="task-three">
+                        <h3><a href="Page Editor.html">Editor's Page</a></h3>
+                        <p>Created a editor's page including the works I have contributed. </p>
+                    </div>
+                    <div class="task-four">
+                        <h3><a href="html-ad.html">Additional Content</a></h3>
+                        <p>Developed an additional Html blog page with links to the webpage's contents
+                        where the anchors were used to jump from specific locations on the page.</p>
+                    </div>
+    
+                </div>    
+            </div>
+        </div>
+        <script>
+            function myfunction(){
+                document.getElementById("all-tasks").classList.toggle("visible");
+            }
+        </script>
+    </body>
+</html>
